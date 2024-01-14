@@ -281,12 +281,14 @@ export default {
         }
       }
       this.showSetwat = false;
+      // App.vue toggle函数
       this.$emit(
         'toggle',
         Object.assign({}, this.form, { remain: this.remain })
       );
     },
     startHandler() {
+      // App.vue toggle函数
       this.$emit('toggle');
       if (!this.running) {
         this.showSetwat = true;

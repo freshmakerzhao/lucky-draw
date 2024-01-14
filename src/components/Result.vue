@@ -24,9 +24,13 @@
         }
       "
     >
+      <!-- 奖项名称 开始 -->
       <span class="name">
         {{ item.name }}
       </span>
+      <!-- 奖项名称 结束 -->
+      
+      <!-- 获奖人员 开始 -->
       <span class="value">
         <span v-if="item.value && item.value.length === 0">
           暂未抽奖
@@ -40,6 +44,7 @@
           {{ data }}
         </span>
       </span>
+      <!-- 获奖人员 结束 -->
     </div>
   </el-dialog>
 </template>
@@ -127,7 +132,7 @@ export default {
     }
     .card {
       display: inline-block;
-      // width: 40px;
+      width: 40px;
       padding: 0 5px;
       line-height: 30px;
       text-align: center;
@@ -143,7 +148,7 @@ export default {
       &:hover {
         &::before {
           content: '删除';
-          width: 150%;
+          width: 100%;
           height: 100%;
           background-color: #ccc;
           position: absolute;

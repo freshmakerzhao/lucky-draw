@@ -67,6 +67,7 @@
       </div>
     </transition>
 
+    <!-- 音频播放按钮 开始 -->
     <el-button
       class="audio"
       type="text"
@@ -81,6 +82,7 @@
         :class="[audioPlaying ? 'iconstop' : 'iconplay1']"
       ></i>
     </el-button>
+    <!-- 音频播放按钮 结束 -->
 
     <LotteryConfig :visible.sync="showConfig" @resetconfig="reloadTagCanvas" />
     <Tool
@@ -93,7 +95,7 @@
     <Result :visible.sync="showResult"></Result>
 
     <span class="copy-right">
-      Copyright©zhangyongfeng5350@gmail.com
+      Copyright©zkxctech_eda
     </span>
 
     <audio
@@ -316,8 +318,10 @@ export default {
     closeRes() {
       this.showRes = false;
     },
+    // 点击“开始”、“立即开始”、“结束”都会触发该方法
     toggle(form) {
       const { speed, config } = this;
+      // “结束” 时 this.running 为 true
       if (this.running) {
         this.audioSrc = bgaudio;
         this.loadAudio();

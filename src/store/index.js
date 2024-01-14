@@ -13,7 +13,7 @@ export default new Vuex.Store({
   state: {
     config: {
       name: '中科芯磁年会',
-      number: 70,
+      number: 69, // 初始化抽奖人数，需要手动修改
       firstPrize: 1
     },
     result: {
@@ -27,7 +27,7 @@ export default new Vuex.Store({
     setClearConfig(state) {
       state.config = {
         name: '中科芯磁年会',
-        number: 70,
+        number: 69, // 初始化抽奖人数，需要手动修改
         firstPrize: 1
       };
       state.newLottery = [];
@@ -46,7 +46,7 @@ export default new Vuex.Store({
     setClearStore(state) {
       state.config = {
         name: '中科芯磁年会',
-        number: 70,
+        number: 69, // 初始化抽奖人数，需要手动修改
         firstPrize: 1
       };
       state.result = {
