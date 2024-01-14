@@ -372,13 +372,13 @@ export default {
 </script>
 <style lang="scss">
 #root {
-  height: 100%;
-  position: relative;
-  background-image: url('./assets/bg1.jpg');
-  background-size: 100% 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: #121936;
+  // 主体样式
+  height: 100%;                   // 元素高度设置为父元素的100%
+  position: relative;             // 元素定位设置为相对定位
+  background-image: url('./assets/bg01.jpg');  // 元素的背景图片
+  background-size: cover;         // 背景图片覆盖整个元素，保持宽高比
+  background-position: center center;  // 背景图片居中显示
+  background-repeat: no-repeat;   // 背景图片不重复
   .mask {
     -webkit-filter: blur(5px);
     filter: blur(5px);
@@ -430,6 +430,7 @@ export default {
     animation: bounce-in 0s reverse;
   }
 }
+
 #main {
   height: 100%;
 }
