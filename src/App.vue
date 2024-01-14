@@ -373,61 +373,66 @@ export default {
 <style lang="scss">
 #root {
   // 主体样式
-  height: 100%;                   // 元素高度设置为父元素的100%
-  position: relative;             // 元素定位设置为相对定位
-  background-image: url('./assets/bg01.jpg');  // 元素的背景图片
+  height: 100%;                   // 设置为父元素的100%
+  position: relative;             // 相对定位
+  background-image: url('./assets/bg01.jpg');  // 背景图片
   background-size: cover;         // 背景图片覆盖整个元素，保持宽高比
   background-position: center center;  // 背景图片居中显示
   background-repeat: no-repeat;   // 背景图片不重复
   .mask {
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
+    -webkit-filter: blur(5px);    // 为webkit浏览器添加模糊效果
+    filter: blur(5px);            // 为元素添加5像素的模糊效果
   }
   header {
-    height: 50px;
-    line-height: 50px;
-    position: relative;
+    height: 50px;                 // 元素高度
+    line-height: 50px;            // 文本垂直居中
+    position: relative;           // 相对定位
     .el-button {
-      position: absolute;
-      top: 17px;
-      padding: 0;
-      z-index: 9999;
+      position: absolute;         // 绝对定位
+      top: 17px;                  // 距离顶部17像素
+      padding: 0;                 // 内边距设置为0
+      z-index: 9999;              // 顶层显示
       &.con {
-        right: 20px;
+        color: #fff;            // 白色
+        font-weight: bold;        // 加粗
+        right: 20px;              // 当el-button同时有class con时，距离右边20像素
       }
       &.res {
-        right: 100px;
+        color: #fff;            // 白色
+        font-weight: bold;        // 加粗
+        right: 100px;             // 当el-button同时有class res时，距离右边100像素
       }
     }
   }
   .audio {
-    position: absolute;
-    top: 100px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    padding: 0;
-    text-align: center;
+    position: absolute;         // 绝对定位
+    top: 100px;                 // 距离顶部100像素
+    right: 30px;                // 距离右边30像素
+    width: 40px;                // 宽度
+    height: 40px;               // 高度
+    line-height: 40px;          // 文本垂直居中
+    border: 1px solid #fff;   // 白色边框
+    border-radius: 50%;         // 圆形
+    padding: 0;                 // 内边距为0
+    text-align: center;         // 文本居中对齐
+
     .iconfont {
-      position: relative;
-      left: 1px;
+      position: relative;       // iconfont类元素定位为相对定位
+      left: 1px;                // iconfont类元素向左偏移1像素
     }
   }
   .copy-right {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #ccc;
-    font-size: 12px;
+    position: absolute;         // 绝对定位
+    right: 0;                   // 紧贴右边
+    bottom: 0;                  // 紧贴底部
+    color: #ccc;              // 文字颜色
+    font-size: 12px;            // 字体大小
   }
   .bounce-enter-active {
-    animation: bounce-in 1.5s;
+    animation: bounce-in 1.5s;  // 动画，持续1.5秒
   }
   .bounce-leave-active {
-    animation: bounce-in 0s reverse;
+    animation: bounce-in 0s reverse; // 反向动画，持续0秒
   }
 }
 

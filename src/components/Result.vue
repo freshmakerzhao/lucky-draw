@@ -143,7 +143,7 @@ export default {
       &:hover {
         &::before {
           content: '删除';
-          width: 100%;
+          width: 150%;
           height: 100%;
           background-color: #ccc;
           position: absolute;

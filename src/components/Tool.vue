@@ -339,6 +339,9 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .el-button {
+    width: 90px;  // 按钮宽度
+  }
   .el-button + .el-button {
     margin-top: 20px;
     margin-left: 0px;
